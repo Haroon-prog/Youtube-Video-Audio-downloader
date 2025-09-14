@@ -1,78 +1,75 @@
-🎥 YouTube Video/Audio Downloader
+# YouTube Video/Audio Downloader
+A modern graphical application for downloading YouTube videos and audio, built with Python and Tkinter.
 
-A simple Python program that allows users to download YouTube videos or audio directly to their computer using pytubefix
-.
+## Features
+- User-Friendly Interface: Clean, dark-themed GUI with intuitive controls
 
+- Dual Download Options: Download videos (MP4) or audio-only (MP3)
 
--------------------------------------------------------------------------------
-✨ Features
+- Title Fetching: Automatically retrieves and displays video title from URL
 
-Download video in the highest available resolution (progressive stream, max 720p).
+- Progress Tracking: Real-time progress bar with percentage indicator
 
-Download audio only from YouTube videos.
+- Folder Selection: Choose custom download directory with browse functionality
 
-Automatically creates organized folders:
+- Background Processing: Non-blocking downloads using threading
 
-downloads/videos/ for video files
+- Cross-Platform: Works on Windows, macOS, and Linux
 
-downloads/audios/ for audio files
+## Requirements
+Python 3.6+
 
-Displays video title and thumbnail URL before downloading.
+### Required packages:
 
-User-friendly command-line interface.
+1. pytubefix
 
--------------------------------------------------------------------------------
-🛠️ Requirements
+2. tkinter (usually included with Python installations)
 
-Python 3.7+
+## Installation
+1. Clone or download this repository
 
-Install dependencies using:
-pip install pytubefix      (run this command in terminal/command prompt to install)
+2. Install the required dependencies:
 
--------------------------------------------------------------------------------
+```bash
+pip install pytubefix
+```
 
-🚀 How to Use
+## Usage
+Run the application:
 
-1.Run the program:
+```bash
 python main.py
+```
+Enter a YouTube URL in the input field
 
-2.Paste the YouTube URL when prompted.
+Click "Get Title" to fetch and display the video title
 
-3.Choose whether you want to download Video or Audio.
+Select download directory (optional - defaults to current directory)
 
-4.The file will be saved inside the respective folder.
+Check "Audio Only" for MP3 download (uncheck for MP4 video)
 
--------------------------------------------------------------------------------
+Click "Download" to begin
 
-📂 Folder Structure
-yt-video-downloader/
-│
-├── main.py
-├── downloads/
-│   ├── videos/
-│   └── audios/
+Monitor progress via the progress bar and status indicator
 
+Receive confirmation when download completes
 
+## Example
+Run WELCOME TO YOUTUBE VIDEO/AUDIO DOWNLOADER PROGRAM !😃😉 Enter the video url(link) you want to download⬇️ https://www.youtube.com/shorts/sxmTTS4qros Do you want Video or Audio ? video
 
--------------------------------------------------------------------------------
+video downloaded!
+check videos folder
 
-⚡ Example Run
-WELCOME TO YOUTUBE VIDEO/AUDIO DOWNLOADER PROGRAM !😃😉
-Enter the video url(link) you want to download⬇️
-https://www.youtube.com/shorts/sxmTTS4qros
-Do you want Video or Audio ?
-video
+## Directory Structure
+Downloads are organized in subfolders:
 
-video downloaded!  
-check downloads/videos folder
+Videos are saved in /videos/ folder
 
--------------------------------------------------------------------------------
+Audio files are saved in /audios/ folder
 
-Notes:
-- The script uses Python's built-in os module, no installation required.
-- Audio downloads are saved as .mp4 for now (conversion to .mp3 can be added in future versions).
-- Document to refer for further details : "https://pytube3.readthedocs.io/en/latest/user/quickstart.html"
+## Notes
+File names are automatically sanitized to remove invalid characters
 
+The application creates necessary folders if they don't exist
 
--------------------------------------------------------------------------------
-
+Download may take time depending on video length and internet speed
